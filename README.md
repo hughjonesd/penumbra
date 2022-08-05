@@ -4,6 +4,7 @@
 # penumbra
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
 This is an R package based on Neal McKee’s [penumbra color
@@ -35,7 +36,8 @@ remotes::install_github("hughjonesd/penumbra")
 
 ``` r
 library(penumbra)
-## basic example code
+
+par(bg = penumbra::base_pal(n = 3)[3])
 palette(penumbra::color_pal(n = 7, contrast = "contrast+"))
 plot(1:7, pch = 19, cex = 5, col = 1:7)
 ```
