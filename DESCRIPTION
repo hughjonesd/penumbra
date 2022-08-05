@@ -1,0 +1,31 @@
+Package: penumbra
+Type: Package
+Title: A Palette Inspired By Nature
+Version: 0.1.0
+Authors@R:
+    c(
+    person(given = "David",
+           family = "Hugh-Jones",
+           role = c("aut", "cph", "cre"),
+           email = "davidhughjones@gmail.com"),
+    person(given = "Neal",
+           family = "McKee",
+           role = c("dtc", "cph"))
+    )
+Author: Who wrote it
+Maintainer: David Hugh-Jones <davidhughjones@gmail.com>
+Description: Penumbra is a mathematically balanced colour scheme 
+    constructed in a perceptually uniform colour space with base 
+    colours inspired by the shades of colour occuring in nature 
+    due to the light of the sun and the sky. It cleanly separates 
+    the perceptual properties of colours while optimally utilising 
+    the available colour space of typical displays.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends: 
+    R (>= 2.10)
+RoxygenNote: 7.2.0
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
