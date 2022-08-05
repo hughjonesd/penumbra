@@ -11,6 +11,14 @@ This imports Neal McKee's penumbra package, available at
 [base_pal()] returns grayscale-ish base colors from dark to light.
 [color_pal()] returns "rainbow"-style colors.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/hughjonesd/penumbra}
+  \item Report bugs at \url{https://github.com/hughjonesd/penumbra/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: David Hugh-Jones \email{davidhughjones@gmail.com} [copyright holder]
 
