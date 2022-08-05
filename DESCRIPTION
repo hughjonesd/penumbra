@@ -12,7 +12,7 @@ Authors@R:
            family = "McKee",
            role = c("dtc", "cph"))
     )
-Author: Who wrote it
+Author: David Hugh-Jones <davidhughjones@gmail.com>
 Maintainer: David Hugh-Jones <davidhughjones@gmail.com>
 Description: Penumbra is a mathematically balanced colour scheme 
     constructed in a perceptually uniform colour space with base 
