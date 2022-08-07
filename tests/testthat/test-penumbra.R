@@ -8,11 +8,18 @@ test_that("Palettes work", {
         palette(base_pal(n = n, contrast = contrast))
       )
     }
+    expect_silent(
+      base_pal(n = 9, contrast = contrast)
+    )
+
     expect_error(
       color_pal(n = 9, contrast = contrast)
     )
     expect_error(
-      base_pal(n = 9, contrast = contrast)
+      color_pal(n = 1, contrast = contrast)
+    )
+    expect_error(
+      base_pal(n = 1, contrast = contrast)
     )
   }
 })

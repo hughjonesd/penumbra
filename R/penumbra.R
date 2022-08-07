@@ -1,7 +1,8 @@
 
 #' Return colors from the Penumbra palette
 #'
-#' @param n Number of colors (maximum 8).
+#' @param n Number of colors. Between 2 and 8 for `color_pal()`, between
+#'   2 and 9 for `base_pal()`.
 #' @param contrast One of `"balanced"`, `"contrast+"` or `"contrast++"`.
 #'
 #' @return A vector of colors in #RRGGBB format
@@ -27,8 +28,18 @@
 base_pal <- function (n, contrast = c("balanced", "contrast+", "contrast++")) {
   contrast <- match.arg(contrast)
   cols <- penumbra$rgb_hex[penumbra$set == contrast & penumbra$palette == "base"]
-  if (n > 8L) stop("No more than 8 colors are available")
-  cols[seq_len(n)]
+  subset <- switch(as.character(n),
+                     "2" = c(1, 9),
+                     "3" = c(1, 5, 9),
+                     "4" = c(2, 4, 6, 8),
+                     "5" = c(1, 3, 5, 7, 9),
+                     "6" = c(1, 2, 4, 6, 8, 9),
+                     "7" = c(1, 2, 3, 5, 7, 8, 9),
+                     "8" = 1:8,
+                     "9" = 1:9,
+                     stop("n must be between 2 and 9")
+                   )
+  cols[subset]
 }
 
 
@@ -36,8 +47,22 @@ base_pal <- function (n, contrast = c("balanced", "contrast+", "contrast++")) {
 #' @export
 color_pal <- function (n, contrast = c("balanced", "contrast+", "contrast++")) {
   contrast <- match.arg(contrast)
-  pal <- if (n <= 6L) "six" else if (n == 7L) "seven" else if (n == 8L) "eight"
-           else stop("No more than 8 colors are available")
+  pal <- switch(as.character(n),
+           "2" = "six",
+           "3" = "six",
+           "4" = "eight",
+           "5" = "eight",
+           "6" = "six",
+           "7" = "seven",
+           "8" = "eight",
+           stop("n must be between 2 and 8")
+         )
   cols <- penumbra$rgb_hex[penumbra$set == contrast & penumbra$palette == pal]
-  cols[seq_len(n)]
+  subset <- switch(as.character(n),
+              "2" = c(1, 4),
+              "3" = c(1, 3, 5),
+              "4" = c(1, 3, 5, 7),
+              1:n
+            )
+  cols[subset]
 }
