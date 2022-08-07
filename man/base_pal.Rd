@@ -3,14 +3,15 @@
 \name{base_pal}
 \alias{base_pal}
 \alias{color_pal}
-\title{Return colors from the Penumbra palette}
+\title{Return colors from the Penumbra palette(s)}
 \usage{
 base_pal(n, contrast = c("balanced", "contrast+", "contrast++"))
 
 color_pal(n, contrast = c("balanced", "contrast+", "contrast++"))
 }
 \arguments{
-\item{n}{Number of colors (maximum 8).}
+\item{n}{Number of colors. Between 2 and 8 for `color_pal()`, between
+2 and 9 for `base_pal()`.}
 
 \item{contrast}{One of `"balanced"`, `"contrast+"` or `"contrast++"`.}
 }
@@ -18,7 +19,13 @@ color_pal(n, contrast = c("balanced", "contrast+", "contrast++"))
 A vector of colors in #RRGGBB format
 }
 \description{
-Return colors from the Penumbra palette
+See https://github.com/nealmckee/penumbra/ for more details about these
+palettes.
+}
+\details{
+Note that these palettes are not suitable for people with colourblindness.
+So, only use them for your own exploratory work, not for producing display
+graphics that other people have to see.
 }
 \examples{
 old_palette <- palette()

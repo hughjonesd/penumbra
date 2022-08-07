@@ -1,5 +1,12 @@
 
-#' Return colors from the Penumbra palette
+#' Return colors from the Penumbra palette(s)
+#'
+#' See https://github.com/nealmckee/penumbra/ for more details about these
+#' palettes.
+#'
+#' Note that these palettes are not suitable for people with colourblindness.
+#' So, only use them for your own exploratory work, not for producing display
+#' graphics that other people have to see.
 #'
 #' @param n Number of colors. Between 2 and 8 for `color_pal()`, between
 #'   2 and 9 for `base_pal()`.
