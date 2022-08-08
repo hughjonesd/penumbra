@@ -50,3 +50,9 @@ par(bg = penumbra::base_pal(n = 3)[3])
 palette(penumbra::color_pal(n = 7))
 plot(1:7, pch = 19, cex = 5, col = 1:7)
 ```
+
+# Note
+
+These palettes are not suitable for people with colourblindness.
+So, only use them for your own exploratory work, not for producing display
+graphics that other people have to see.

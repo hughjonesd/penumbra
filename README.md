@@ -43,3 +43,9 @@ plot(1:7, pch = 19, cex = 5, col = 1:7)
 ```
 
 <img src="man/figures/README-example-1.png" width="100%" />
+
+# Note
+
+These palettes are not suitable for people with colourblindness. So,
+only use them for your own exploratory work, not for producing display
+graphics that other people have to see.
